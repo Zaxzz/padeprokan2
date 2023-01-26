@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:padeprokan/auth/login.dart';
-import 'package:padeprokan/auth/register.dart';
+import 'package:padeprokan/constant.dart';
+import 'package:padeprokan/screens/auth/login.dart';
+import 'package:padeprokan/screens/auth/register.dart';
 
 class ButtonWelcome extends StatefulWidget {
   const ButtonWelcome({super.key});
@@ -15,16 +16,23 @@ class _ButtonWelcomeState extends State<ButtonWelcome> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: ElevatedButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => LoginPage()),
-          );
-        },
-        child: Text('Masuk'),
-        style: ElevatedButton.styleFrom(
-            backgroundColor: Color.fromARGB(255, 255, 145, 0)),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: SizedBox(
+            width: MediaQuery.of(context).size.width,
+            height: 50,
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginPage()),
+                );
+              },
+              child: Text('Login'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: ColorStyle().yellowButton,
+              ),
+            )),
       ),
     );
   }
@@ -40,17 +48,24 @@ class ButtonRegist extends StatefulWidget {
 class _ButtonRegistState extends State<ButtonRegist> {
   @override
   Widget build(BuildContext context) {
-  return Container(
-      child: ElevatedButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => RegisterPage()),
-          );
-        },
-        child: Text('Daftar'),
-        style: ElevatedButton.styleFrom(
-            backgroundColor: Color.fromARGB(255, 255, 255, 255)),
+    return Container(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: SizedBox(
+          height: 50,
+          width: MediaQuery.of(context).size.width,
+          child: ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => RegisterPage()),
+              );
+            },
+            child: Text('Register'),
+            style: ElevatedButton.styleFrom(
+                backgroundColor: Color.fromARGB(255, 223, 219, 211)),
+          ),
+        ),
       ),
     );
   }
