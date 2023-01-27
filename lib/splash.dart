@@ -1,6 +1,7 @@
 import 'dart:async';
-
+import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
+import 'package:padeprokan/class.dart';
 import 'package:padeprokan/welcome.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -15,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
         Duration(seconds: 2),
         () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => WelcomeScreen())));
+            context, MaterialPageRoute(builder: (context) => (LoginPage()))));
   }
 
   @override
@@ -23,7 +24,10 @@ class _SplashScreenState extends State<SplashScreen> {
     return Container(
       color: Color.fromARGB(255, 255, 255, 255),
       child: Center(
-        child: Image.asset('assets/images/logo_splashscreen.png',width: MediaQuery.of(context).size.width / 2,),
+        child: SvgPicture.asset(
+          'assets/images/padeprokanmain.svg',
+          width: MediaQuery.of(context).size.width / 2,
+        ),
       ),
     );
   }

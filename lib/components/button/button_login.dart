@@ -14,15 +14,31 @@ class ButtonLogin extends StatefulWidget {
 class _ButtonLoginState extends State<ButtonLogin> {
   @override
   Widget build(BuildContext context) {
+    double deviceWidth = MediaQuery.of(context).size.width;
+    double deviceHight = MediaQuery.of(context).size.height;
     return Container(
-      child: ElevatedButton(
-          child: Text('Login'),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => HomePadeprokan()),
-            );
-          }),
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: MaterialButton(
+                  splashColor: Color.fromRGBO(247, 183, 49, 1),
+                  color: Colors.amber,
+                  child: const Text(
+                    'Login',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomePadeprokan()),
+                    );
+                  }),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:padeprokan/auth/login.dart';
 import 'package:padeprokan/auth/register.dart';
+import 'package:padeprokan/welcome.dart';
 
 class ButtonWelcome extends StatefulWidget {
   const ButtonWelcome({super.key});
@@ -40,12 +41,12 @@ class ButtonRegist extends StatefulWidget {
 class _ButtonRegistState extends State<ButtonRegist> {
   @override
   Widget build(BuildContext context) {
-  return Container(
+    return Container(
       child: ElevatedButton(
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => RegisterPage()),
+            MaterialPageRoute(builder: (context) => LoginPage()),
           );
         },
         child: Text('Daftar'),
