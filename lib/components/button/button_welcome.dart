@@ -6,6 +6,7 @@ import 'package:padeprokan/screens/auth/login.dart';
 import 'package:padeprokan/screens/auth/register.dart';
 import 'package:padeprokan/auth/login.dart';
 import 'package:padeprokan/auth/register.dart';
+import 'package:padeprokan/constant.dart';
 import 'package:padeprokan/welcome.dart';
 
 class ButtonWelcome extends StatefulWidget {
