@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:padeprokan/constant.dart';
+import 'package:padeprokan/screens/auth/login.dart';
+import 'package:padeprokan/screens/auth/register.dart';
 import 'package:padeprokan/auth/login.dart';
 import 'package:padeprokan/auth/register.dart';
 import 'package:padeprokan/welcome.dart';
@@ -16,16 +19,23 @@ class _ButtonWelcomeState extends State<ButtonWelcome> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: ElevatedButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => LoginPage()),
-          );
-        },
-        child: Text('Masuk'),
-        style: ElevatedButton.styleFrom(
-            backgroundColor: Color.fromARGB(255, 255, 145, 0)),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: SizedBox(
+            width: MediaQuery.of(context).size.width,
+            height: 50,
+            child: ElevatedButton(
+              onPressed: () {
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(builder: (context) => LoginPage()),
+                // );
+              },
+              child: Text('Login'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: kuningColor,
+              ),
+            )),
       ),
     );
   }
@@ -44,10 +54,10 @@ class _ButtonRegistState extends State<ButtonRegist> {
     return Container(
       child: ElevatedButton(
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => LoginPage()),
-          );
+          // Navigator.push(
+          //   context,
+          //   MaterialPageRoute(builder: (context) => LoginPage()),
+          // );
         },
         child: Text('Daftar'),
         style: ElevatedButton.styleFrom(

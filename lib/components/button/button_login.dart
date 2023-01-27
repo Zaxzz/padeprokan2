@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:padeprokan/auth/register.dart';
-import 'package:padeprokan/home/home.dart';
+import 'package:padeprokan/constant.dart';
+import 'package:padeprokan/screens/auth/register.dart';
+import 'package:padeprokan/screens/home/home.dart';
 
 class ButtonLogin extends StatefulWidget {
   const ButtonLogin({super.key});

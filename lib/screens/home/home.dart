@@ -17,7 +17,6 @@ class _HomePadeprokanState extends State<HomePadeprokan> {
         leading: Image.asset('assets/images/logo.png'),
         elevation: 1,
         backgroundColor: Colors.white,
-        
       ),
       body: SafeArea(
         child: Container(
