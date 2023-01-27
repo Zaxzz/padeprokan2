@@ -20,26 +20,6 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-<<<<<<< Updated upstream
-        child: Column(
-          children: [ 
-            SizedBox(height: MediaQuery.of(context).size.height / 3,),
-            Center(
-              child: Container(
-                width: MediaQuery.of(context).size.width * 0.7,
-                child: Image.asset('assets/images/logo.png'),
-              ),
-            ),
-            Text('Selamat Datang Di Padeprokan'),
-            Spacer(),
-            SizedBox(height: 20,),
-            ButtonWelcome(),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 20),
-              child: ButtonRegist(),
-            ),
-          ],
-=======
         child: Container(
           width: MediaQuery.of(context).size.width,
           child: Column(
@@ -176,7 +156,6 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ],
           ),
->>>>>>> Stashed changes
         ),
       ),
     );

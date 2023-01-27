@@ -18,25 +18,6 @@ class _ButtonLoginState extends State<ButtonLogin> {
     double deviceWidth = MediaQuery.of(context).size.width;
     double deviceHight = MediaQuery.of(context).size.height;
     return Container(
-<<<<<<< Updated upstream
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: SizedBox(
-          width: MediaQuery.of(context).size.width,
-          height: 50,
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: ColorStyle().yellowButton,
-            ),
-              child: Text('Login'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => HomePadeprokan()),
-                );
-              }),
-        ),
-=======
       child: Row(
         children: <Widget>[
           Expanded(
@@ -58,7 +39,6 @@ class _ButtonLoginState extends State<ButtonLogin> {
             ),
           ),
         ],
->>>>>>> Stashed changes
       ),
     );
   }

@@ -28,7 +28,7 @@ class ButtonDaftarState extends State<ButtonDaftar> {
                 // );
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: ColorStyle().yellowButton,
+                backgroundColor: kuningColor,
               )),
         ),
       ),
