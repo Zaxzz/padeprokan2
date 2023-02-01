@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:padeprokan/auth/register.dart';
 import 'package:padeprokan/class.dart';
 import 'package:padeprokan/components/button/button_login.dart';
-import 'package:padeprokan/constant.dart';
-import 'package:padeprokan/components/button/button_welcome.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -37,16 +33,16 @@ class _LoginPageState extends State<LoginPage> {
               ),
               Padding(padding: EdgeInsets.all(5)),
               Row(
-                children: [
+                children: const [
                   Padding(padding: EdgeInsets.all(10)),
-                  const Text(
+                  Text(
                     "Login",
                     style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
               Row(
-                children: [
+                children: const [
                   Padding(
                       padding:
                           EdgeInsets.symmetric(horizontal: 10, vertical: 10)),
@@ -57,10 +53,9 @@ class _LoginPageState extends State<LoginPage> {
                 ],
               ),
               Row(
-                children: [
+                children: const [
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 10, vertical: 35),
+                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 35),
                   ),
                   Text(
                     'Email *',
@@ -72,9 +67,9 @@ class _LoginPageState extends State<LoginPage> {
                 width: MediaQuery.of(context).size.width,
                 padding:
                     const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
-                child: TextField(
+                child: const TextField(
                   controller: null,
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: 'ex.haryadi69@mejik.id',
                   ),
@@ -82,10 +77,9 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               Row(
-                children: [
+                children: const [
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 10, vertical: 20),
+                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
                   ),
                   Text(
                     'Password *',
@@ -97,6 +91,7 @@ class _LoginPageState extends State<LoginPage> {
                 width: MediaQuery.of(context).size.width,
                 padding:
                     const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+                // ignore: prefer_const_constructors
                 child: TextField(
                   controller: null,
                   decoration: const InputDecoration(
@@ -110,7 +105,7 @@ class _LoginPageState extends State<LoginPage> {
                 width: MediaQuery.of(context).size.width,
                 child: Row(
                   children: [
-                    Padding(
+                    const Padding(
                         padding:
                             EdgeInsets.symmetric(horizontal: 70, vertical: 0)),
                     TextButton(
@@ -121,7 +116,7 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           );
                         }),
-                        child: Text(
+                        child: const Text(
                           "Forgot Your Password?",
                           style: TextStyle(
                               fontSize: 20, color: Colors.deepPurpleAccent),
@@ -131,15 +126,15 @@ class _LoginPageState extends State<LoginPage> {
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
-                child: Padding(
-                  padding: const EdgeInsets.all(10),
+                child: const Padding(
+                  padding: EdgeInsets.all(10),
                   child: ButtonLogin(),
                 ),
               ),
               Row(
                 children: [
                   Padding(padding: EdgeInsets.symmetric(horizontal: 20)),
-                  Text(
+                  const Text(
                     "Don’t have an account yet?",
                     style: TextStyle(fontSize: 16),
                   ),

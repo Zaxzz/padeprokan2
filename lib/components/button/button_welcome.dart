@@ -34,7 +34,7 @@ class _ButtonWelcomeState extends State<ButtonWelcome> {
               },
               child: Text('Login'),
               style: ElevatedButton.styleFrom(
-                backgroundColor: kuningColor,
+                backgroundColor: buttonColor,
               ),
             )),
       ),
