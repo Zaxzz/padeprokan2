@@ -28,7 +28,11 @@ class ButtonDaftarState extends State<ButtonDaftar> {
                 // );
               },
               style: ElevatedButton.styleFrom(
+<<<<<<< Updated upstream
                 backgroundColor: ColorStyle().yellowButton,
+=======
+                backgroundColor: buttonColor,
+>>>>>>> Stashed changes
               )),
         ),
       ),

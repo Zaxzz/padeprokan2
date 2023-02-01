@@ -36,7 +36,11 @@ class _ButtonWelcomeState extends State<ButtonWelcome> {
               },
               child: Text('Login'),
               style: ElevatedButton.styleFrom(
+<<<<<<< Updated upstream
                 backgroundColor: ColorStyle().yellowButton,
+=======
+                backgroundColor: buttonColor,
+>>>>>>> Stashed changes
               ),
             )),
       ),
