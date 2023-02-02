@@ -7,20 +7,16 @@ import 'package:padeprokan/screens/auth/login.dart';
 import 'package:wc_form_validators/wc_form_validators.dart';
 import 'package:padeprokan/constant.dart';
 
-class RegisterPage extends StatefulWidget {
-  const RegisterPage({super.key});
+class ForgotPassword extends StatefulWidget {
+  const ForgotPassword({super.key});
 
   @override
-  State<RegisterPage> createState() => _RegisterPageState();
+  State<ForgotPassword> createState() => _RegisterPageState();
 }
 
-class _RegisterPageState extends State<RegisterPage> {
-  TextEditingController fullname = TextEditingController();
+class _RegisterPageState extends State<ForgotPassword> {
   TextEditingController email = TextEditingController();
-  TextEditingController password = TextEditingController();
-  TextEditingController confrim_password = TextEditingController();
   final _fromkey = GlobalKey<FormState>();
-  bool _isObscure = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,7 +52,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         Align(
                           alignment: Alignment.topLeft,
                           child: Text(
-                            'Register',
+                            'Forgot password',
                             style: TextStyle(
                               fontWeight: FontWeight.w600,
                               fontSize: 30,
@@ -69,7 +65,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         Align(
                           alignment: Alignment.topLeft,
                           child: Text(
-                            'Registration and start manage your \nlearning process!',
+                            'Please Enter The Email You used \nWhen You Registred',
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 16,
@@ -86,102 +82,18 @@ class _RegisterPageState extends State<RegisterPage> {
                     padding: const EdgeInsets.all(10),
                     child: TextFormField(
                       cursorColor: Colors.black,
-                      controller: fullname,
-                      decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.deepPurple)),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.deepPurple)),
-                        hintText: 'Full Name',
-                      ),
-                      keyboardType: TextInputType.text,
-                      validator: Validators.compose([
-                        Validators.required('Your full name is required'),
-                        Validators.email('Your name is too short')
-                      ]),
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    child: TextFormField(
-                      cursorColor: Colors.black,
                       controller: email,
                       decoration: const InputDecoration(
                         enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(color: Colors.deepPurple)),
                         focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(color: Colors.deepPurple)),
-                        hintText: 'Email',
+                        hintText: 'email',
                       ),
-                      keyboardType: TextInputType.text,
+                      keyboardType: TextInputType.visiblePassword,
                       validator: Validators.compose([
-                        Validators.required('Your email is required'),
-                        Validators.email('Please insert a valid email!')
-                      ]),
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    child: TextFormField(
-                      cursorColor: Colors.black,
-                      obscureText: _isObscure,
-                      controller: password,
-                      decoration: InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.deepPurple)),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.deepPurple)),
-                        hintText: 'Password',
-                        suffixIcon: IconButton(
-                            icon: Icon(
-                              _isObscure
-                                  ? Icons.visibility
-                                  : Icons.visibility_off,
-                              color: Colors.grey,
-                            ),
-                            onPressed: () {
-                              setState(() {
-                                _isObscure = !_isObscure;
-                              });
-                            }),
-                      ),
-                      keyboardType: TextInputType.text,
-                      validator: Validators.compose([
-                        Validators.required(' Your password is required'),
-                        Validators.email('Please insert at least 6 character')
-                      ]),
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    child: TextFormField(
-                      cursorColor: Colors.black,
-                      obscureText: _isObscure,
-                      controller: confrim_password,
-                      decoration: InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.deepPurple)),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.deepPurple)),
-                        hintText: 'Confirm Password',
-                        suffixIcon: IconButton(
-                            icon: Icon(
-                              _isObscure
-                                  ? Icons.visibility
-                                  : Icons.visibility_off,
-                              color: Colors.grey,
-                            ),
-                            onPressed: () {
-                              setState(() {
-                                _isObscure = !_isObscure;
-                              });
-                            }),
-                      ),
-                      keyboardType: TextInputType.text,
-                      validator: Validators.compose([
-                        Validators.required('Your password is required'),
-                        Validators.email(
-                            'two password that you enter is inconsisten!!')
+                        Validators.required('Please input your email'),
+                        Validators.email('please insert valid email!')
                       ]),
                     ),
                   ),
@@ -192,7 +104,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       height: 50,
                       child: ElevatedButton(
                           child: Text(
-                            'Register',
+                            'Submit',
                             style: TextStyle(color: Colors.white),
                           ),
                           onPressed: () {
@@ -211,7 +123,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("Don't have an account yet?"),
+                      Text("Back To"),
                       TextButton(
                           onPressed: () {
                             Navigator.push(
@@ -221,7 +133,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             );
                           },
                           child: Text(
-                            "Login here",
+                            "Sign In Here",
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.deepPurple),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:padeprokan/class.dart';
 import 'package:padeprokan/constant.dart';
 import 'package:padeprokan/screens/auth/register.dart';
 import 'package:padeprokan/screens/home/home.dart';
@@ -22,14 +23,17 @@ class _ButtonLoginState extends State<ButtonLogin> {
           width: MediaQuery.of(context).size.width,
           height: 50,
           child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: ColorStyle().yellowButton,
-            ),
-              child: Text('Login'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: ColorStyle().yellowButton,
+              ),
+              child: Text(
+                'Login',
+                style: TextStyle(color: Colors.white),
+              ),
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => HomePadeprokan()),
+                  MaterialPageRoute(builder: (context) => ClassPage()),
                 );
               }),
         ),

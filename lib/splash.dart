@@ -20,10 +20,28 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Color.fromARGB(255, 255, 255, 255),
-      child: Center(
-        child: Image.asset('assets/images/logo_splashscreen.png',width: MediaQuery.of(context).size.width / 2,),
+    return Scaffold(
+      body: Container(
+        color: Color.fromARGB(255, 255, 255, 255),
+        child: Center(
+          // heightFactor: ,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/images/logo_splashscreen.png',
+                width: MediaQuery.of(context).size.width / 3,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Image.asset(
+                'assets/images/padeprokan.png',
+                width: MediaQuery.of(context).size.width / 3,
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
