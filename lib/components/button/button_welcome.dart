@@ -4,6 +4,10 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:padeprokan/constant.dart';
 import 'package:padeprokan/screens/auth/login.dart';
 import 'package:padeprokan/screens/auth/register.dart';
+import 'package:padeprokan/auth/login.dart';
+import 'package:padeprokan/auth/register.dart';
+import 'package:padeprokan/constant.dart';
+import 'package:padeprokan/welcome.dart';
 
 class ButtonWelcome extends StatefulWidget {
   const ButtonWelcome({super.key});
@@ -23,14 +27,14 @@ class _ButtonWelcomeState extends State<ButtonWelcome> {
             height: 50,
             child: ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => LoginPage()),
-                );
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(builder: (context) => LoginPage()),
+                // );
               },
               child: Text('Login'),
               style: ElevatedButton.styleFrom(
-                backgroundColor: ColorStyle().yellowButton,
+                backgroundColor: buttonColor,
               ),
             )),
       ),
@@ -49,23 +53,16 @@ class _ButtonRegistState extends State<ButtonRegist> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: SizedBox(
-          height: 50,
-          width: MediaQuery.of(context).size.width,
-          child: ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => RegisterPage()),
-              );
-            },
-            child: Text('Register'),
-            style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 223, 219, 211)),
-          ),
-        ),
+      child: ElevatedButton(
+        onPressed: () {
+          // Navigator.push(
+          //   context,
+          //   MaterialPageRoute(builder: (context) => LoginPage()),
+          // );
+        },
+        child: Text('Daftar'),
+        style: ElevatedButton.styleFrom(
+            backgroundColor: Color.fromARGB(255, 255, 255, 255)),
       ),
     );
   }

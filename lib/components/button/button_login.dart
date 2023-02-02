@@ -24,7 +24,7 @@ class _ButtonLoginState extends State<ButtonLogin> {
           height: 50,
           child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: ColorStyle().yellowButton,
+                backgroundColor: kuningColor,
               ),
               child: Text(
                 'Login',

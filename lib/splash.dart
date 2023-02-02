@@ -1,6 +1,7 @@
 import 'dart:async';
-
+import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
+import 'package:padeprokan/constant.dart';
 import 'package:padeprokan/welcome.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -13,9 +14,9 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 2),
-        () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => WelcomeScreen())));
+        const Duration(seconds: 2),
+        () => Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (context) => (const LoginPage()))));
   }
 
   @override
