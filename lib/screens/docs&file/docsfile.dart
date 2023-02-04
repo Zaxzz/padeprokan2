@@ -554,8 +554,131 @@ class _GetimageState extends State<Getimage> {
               fontSize: 25,
             ),
           ),
-        ],
+          Container(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: SizedBox(
+          width: 200,
+          height: 40,
+          child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.orange,
+              ),
+              child: Text(
+                'Upload your first file',
+                style: TextStyle(color: Colors.white),
+              ),
+              onPressed: () {
+                
+                  showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                        title: SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            children: [
+                              Text(
+                                'Upload files',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 230,
+                              ),
+                              IconButton(
+                                  onPressed: () => Navigator.of(context).pop(),
+                                  icon: Icon(Icons.close)),
+                            ],
+                          ),
+                        ),
+                        content: Container(
+                          height: 150,
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.purple),
+                              color: Colors.grey.shade200),
+                          child: Center(
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 30),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(Icons.close),
+                                  Text(
+                                    'Click or drag file to this area to upload',
+                                    style: TextStyle(fontSize: 15),
+                                  ),
+                                  SizedBox(
+                                    height: 3,
+                                  ),
+                                  Text(
+                                    'Support for a singel or bulk upload. Strictly prohibit',
+                                    style: TextStyle(
+                                        fontSize: 13, color: Colors.grey),
+                                  ),
+                                  Text(
+                                    'from uploading company data or other band files',
+                                    style: TextStyle(
+                                        fontSize: 14, color: Colors.grey),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                        actions: [
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Spacer(),
+                              Container(
+                                child: Column(
+                                  children: [
+                                    Container(
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          border:
+                                              Border.all(color: Colors.black)),
+                                      child: TextButton(
+                                          onPressed: () =>
+                                              Navigator.of(context).pop(),
+                                          child: Text(
+                                            'Cancel',
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                            ),
+                                          )),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.purple,
+                                    borderRadius: BorderRadius.circular(10),
+                                    border: Border.all(color: Colors.purple)),
+                                child: TextButton(
+                                  onPressed: () {},
+                                  child: Text('Submit',
+                                      style: TextStyle(color: Colors.white)),
+                                ),
+                              ),
+                            ],
+                          )
+                        ]),
+                  );
+              }),
+        ),
       ),
-    );
+      ),
+        ]
+      )
+      );
   }
 }
