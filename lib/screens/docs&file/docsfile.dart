@@ -27,18 +27,17 @@ class _DocsfileState extends State<Docsfile> {
               height: 35,
               width: double.infinity,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(5),
                 color: Colors.white,
-                border: Border.all(color: Colors.purple, width: 0.5),
+                border: Border.all(color: Colors.grey.shade200, width: 0.5),
               ),
               child: TextField(
                 decoration: InputDecoration(
                     contentPadding: const EdgeInsets.only(left: 20),
-                    fillColor: Colors.purple[700],
-                    hintText: "search",
-                    prefixIcon: const Icon(Icons.search),
+                    hintText: "search file or folder",
+                    suffixIcon: const Icon(Icons.search),
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20))),
+                        borderRadius: BorderRadius.circular(5))),
               ),
             ),
           ),
