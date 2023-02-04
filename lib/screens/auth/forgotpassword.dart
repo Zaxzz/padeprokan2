@@ -116,7 +116,7 @@ class _RegisterPageState extends State<ForgotPassword> {
                             // );
                           },
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: ColorStyle().yellowButton,
+                            backgroundColor: Colors.black,
                           )),
                     ),
                   ),

@@ -204,7 +204,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             // );
                           },
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: ColorStyle().yellowButton,
+                            backgroundColor: Colors.black,
                           )),
                     ),
                   ),

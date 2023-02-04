@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:padeprokan/screens/docs&file/docsfile.dart';
 
 void main() => runApp(const ClassPage());
 
@@ -151,8 +152,10 @@ class ClassPage extends StatelessWidget {
                       children: [
                         InkWell(
                           onTap: () {
-                            Navigator.pop(context);
-                          },
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Docsfile()));},
                           child: Ink(
                             // ignore: sort_child_properties_last
                             child: Container(

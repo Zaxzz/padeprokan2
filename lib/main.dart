@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:padeprokan/constant.dart';
+import 'package:padeprokan/screens/docs&file/docsfile.dart';
 import 'package:padeprokan/splash.dart';
 import 'package:padeprokan/constant.dart';
 

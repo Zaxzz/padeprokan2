@@ -29,10 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset(
-                'assets/images/logo_splashscreen.png',
-                width: MediaQuery.of(context).size.width / 3,
-              ),
+             
               SizedBox(
                 height: 20,
               ),
